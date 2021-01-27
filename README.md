@@ -1,6 +1,32 @@
 # NgReferenceApp
 
+This project demonstrates a variety of Angular techniques to serve as reference.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+
+## Angular Material
+https://material.angular.io/guide/getting-started
+
+### Install
+- $ ng add @angular/material
+- choose a theme
+- set global typography
+-- https://material.angular.io/guide/typography
+-- set up animations
+
+-- get rid of "experimental decorators" error message:
+In VSCode go to preferences -> settings, you will see an option to enable/disable experimentalDecorators. Check it and save the settings file.
+
+-- Angular Extension Pack for code completion, auto imports
+https://marketplace.visualstudio.com/items?itemName=loiane.angular-extension-pack
+
+### Components
+https://material.angular.io/components/categories
+
+#### Navigation Toolbar
+https://www.techiediaries.com/angular-material-navigation-toolbar-sidenav/
+
+
 
 ## Development server
 
