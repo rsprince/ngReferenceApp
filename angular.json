@@ -125,6 +125,46 @@
           }
         }
       }
+    },
+    "ref-shared": {
+      "projectType": "library",
+      "root": "projects/ref-shared",
+      "sourceRoot": "projects/ref-shared/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ref-shared/tsconfig.lib.json",
+            "project": "projects/ref-shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ref-shared/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ref-shared/src/test.ts",
+            "tsConfig": "projects/ref-shared/tsconfig.spec.json",
+            "karmaConfig": "projects/ref-shared/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ref-shared/tsconfig.lib.json",
+              "projects/ref-shared/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "NgReferenceApp"

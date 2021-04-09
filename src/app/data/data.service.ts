@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-  private getDataUrl: string = 'assets/api/users.json';
+  getDataUrl: string = 'assets/api/users.json';
   data: any;
 
   constructor(private http: HttpClient) { }
@@ -15,21 +15,21 @@ export class DataService {
     return this.data;
   }
 
-  getItem(id:number) {
+  //getItem(id:number) {
 
-  }
+  //}
 
-  createItem(item) {
+  //createItem(item) {
 
-  }
+  //}
 
-  deleteItem() {
+  //deleteItem() {
 
-  }
+  //}
 
-  updateItem() {
+  //updateItem() {
 
-  }
+  //}
 
 
 }

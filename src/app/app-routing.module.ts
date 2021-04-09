@@ -1,3 +1,4 @@
+import { ContactsComponent } from './contacts/contacts.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -10,10 +11,11 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'form', component: FormComponent },
-  { 
-    path: 'data', 
+  {
+    path: 'data',
     loadChildren: './data/data.module#DataModule'
-  }
+  },
+  { path: 'contact', component: ContactsComponent }
 ];
 
 @NgModule({

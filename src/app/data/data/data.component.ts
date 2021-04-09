@@ -1,5 +1,12 @@
+import { MatTableDataSource } from '@angular/material/table';
 import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
+
+export interface User {
+  id: string;
+  name: string;
+  phone: string;
+}
 
 @Component({
   selector: 'app-data',
@@ -7,7 +14,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data.component.scss']
 })
 export class DataComponent implements OnInit {
-  users: any;
+  users: any = [];
+  dataSource: any;
+  displayedColumns = ['id', 'name', 'phone'];
 
   constructor(private dataService: DataService) { }
 
@@ -17,9 +26,10 @@ export class DataComponent implements OnInit {
 
   getUsers() {
     this.dataService.getItems()
-    .subscribe(items => this.users = items)
+    .subscribe(items => {
+      this.users = items;
+      //this.dataSource = new MatTableDataSource<User>(this.users);
+    })
   }
-
-
 
 }

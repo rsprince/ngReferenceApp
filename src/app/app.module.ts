@@ -1,5 +1,6 @@
+import { RefSharedModule } from './../../projects/ref-shared/src/lib/ref-shared.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { FormComponent } from './form/form.component';
 //import { DataComponent } from './data/data/data.component';
 import { DataModule } from './data/data.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 
@@ -23,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     DashboardComponent,
     FormComponent,
+    ContactsComponent,
     //DataComponent,
   ],
   imports: [
@@ -31,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     AngularMaterialsModule,
     HttpClientModule,
-    DataModule
+    DataModule,
+    RefSharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

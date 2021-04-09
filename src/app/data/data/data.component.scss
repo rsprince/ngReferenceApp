@@ -1,0 +1,86 @@
+.header {
+  background: #222;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+  //display: inline-flex; // creates an inline container ("shrink wrapped")
+  border: 1px solid #222;
+  height:  4em;
+  // default flow left to right, row
+  //flex-direction: row;
+  //flex-direction: row-reverse; right to left
+
+  // orient vertical-align;
+  // flex-direction: column; // | column-reverse
+
+  // top to bottom, bottom to top
+  //flex-direction: column | column-reverse;
+
+  flex-wrap: wrap; // nowrap is default, wrap-reverse
+
+  // SHORTHAND: combine direction and wrap
+  //flex-flow: column wrap;
+
+  //width: 100%;
+
+  // Alignments
+  justify-content: center;
+
+  // Vertical Alignment
+  //justify-content: center;
+  //flex-direction: column;
+
+  // divides up extra space, puts between items
+  // justify-content: space-between;
+
+  // Aligns items along cross axis
+  //align-items: stretch; // use all the .flex-container
+  align-items: baseline;
+
+  // Aligning multiple line .flex-container
+  //align-content: center;
+
+
+}
+
+.flex-item {
+  font-size: 1.2em;
+  height: 3em;
+  padding: 1em;
+  border-right: 2px solid #222;
+  //width: 5em;
+
+  // items default to order: 0  (ordinal group)
+  // only visual order is changed, not source
+  //order: 1
+
+  // how much an item will stretch in relation to other items
+    // adds to any flex-basis setting
+  //flex-grow: 1;
+
+  // how space is distributed when there's not enough space to fit items
+  //flex-shrink: 1;
+
+  // SHORTHAND
+  //flex: flex-grow flex-shrink flex-basis
+
+  // Alignment of individual align-items
+  // align-self: flex-start;
+}
+
+.larger {
+  flex-grow: 4;
+  // initial size. It not set, items set to auto
+  flex-basis: 10em;
+}
+
+.smaller {
+  //flex-shrink: 4;
+  flex-basis: 2em;
+}
+
+.sized {
+
+}

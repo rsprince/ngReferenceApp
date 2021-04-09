@@ -12,6 +12,12 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ref-shared/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ref-shared/tsconfig.spec.json"
     }
 ]
 }

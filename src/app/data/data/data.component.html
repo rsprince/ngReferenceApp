@@ -1,5 +1,27 @@
-<p *ngFor="let user of users">
-  User ID: {{ user.userId }} <br />
-  User Name: {{ user.userName }} <br />
-  User Phone: {{ user.userPhone }}
-</p>
+<div class="header flex-container">
+  <span class="flex-item smaller">
+    ID
+  </span>
+  <span class="flex-item larger">
+    Name
+  </span>
+  <span class="flex-item">
+    Phone
+  </span>
+</div>
+
+<div class="flex-container" *ngFor="let user of users">
+  <span class="flex-item smaller">
+    {{ user.userId }}
+  </span>
+  <span class="flex-item larger">
+    {{ user.userName }}
+  </span>
+  <span class="flex-item">
+    {{ user.userPhone }}
+  </span>
+</div>
+
+<!--<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+</table>-->
